@@ -1,0 +1,25 @@
+﻿@model uowProject.Models.Platform
+<style>
+    .row {
+        width: 45%;
+        margin-left: 5%;
+    }
+</style>
+<form method="post">
+    <div class="row">
+        <h2>Create A New Publisher</h2>
+    </div>
+    
+    <div class="row">
+        <label asp-for="PlatformName"></label>
+        <input asp-for="PlatformName" />
+    </div>
+    <br />
+    <div class="row">
+        <div>
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a asp-action="Index" class="btn btn-secondary">Back To List</a>
+        </div>
+
+    </div>
+</form>

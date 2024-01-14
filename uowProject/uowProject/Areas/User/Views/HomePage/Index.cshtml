@@ -1,0 +1,243 @@
+﻿@model IEnumerable<uowProject.Models.Game>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>GameVault</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/usertemplate/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="~/usertemplate/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="~/usertemplate/assets/css/templatemo-lugx-gaming.css">
+    <link rel="stylesheet" href="~/usertemplate/assets/css/owl.css">
+    <link rel="stylesheet" href="~/usertemplate/assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <!--
+
+    TemplateMo 589 lugx gaming
+
+    https://templatemo.com/tm-589-lugx-gaming
+
+    -->
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a asp-area ="User" asp-controller="HomePage" asp-action="Index" class="logo">
+                            <img src="~/usertemplate/assets/images/pngwing.png" alt="" style="width: 158px;"/>
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a asp-area="User" asp-controller="HomePage" asp-action="Index" class="active">Home</a></li>
+                            <li><a asp-area="Admin" asp-controller="Home" asp-action="Index">Admin</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <div class="main-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="caption header-text">
+                        <h6>Welcome to GameVault</h6>
+                        <h2>BEST GAMING SITE EVER!</h2>
+                        <p>GameVault Gaming is one of the best gaming websites. You can download and use any game you want to play. Please tell your friends about our website.</p>
+                        <div class="search-input">
+                            <form id="search" action="#">
+                                <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
+                                <button role="button">Search Now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-lg-2">
+                    <div class="right-image">
+                        <img src="~/usertemplate/assets/images/banner-image.jpg" alt="">
+                        <span class="price">$22</span>
+                        <span class="offer">-40%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <a href="#">
+                        <div class="item">
+                            <div class="image">
+                                <img src="~/usertemplate/assets/images/featured-01.png" alt="" style="max-width: 44px;">
+                            </div>
+                            <h4>Free Storage</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="#">
+                        <div class="item">
+                            <div class="image">
+                                <img src="~/usertemplate/assets/images/featured-02.png" alt="" style="max-width: 44px;">
+                            </div>
+                            <h4>User More</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="#">
+                        <div class="item">
+                            <div class="image">
+                                <img src="~/usertemplate/assets/images/featured-03.png" alt="" style="max-width: 44px;">
+                            </div>
+                            <h4>Reply Ready</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="#">
+                        <div class="item">
+                            <div class="image">
+                                <img src="~/usertemplate/assets/images/featured-04.png" alt="" style="max-width: 44px;">
+                            </div>
+                            <h4>Easy Layout</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section trending">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h6>Games</h6>
+                        <h2>Our Games</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                </div>
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item">
+                            <div class="thumb">
+                                <img src="@item.GameImage" alt="">
+                                <span class="price"><em>$@item.GamePriceBefore</em>$@item.GamePriceAfter</span>
+                            </div>
+                            <div class="down-content">
+                                <span class="category">@item.Category</span>
+                                <h4>@item.GameName</h4>
+                                <a asp-area="User" asp-controller="HomePage" asp-action="Index"><i class="fa fa-shopping-bag"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="section cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="shop">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section-heading">
+                                    <h6>Our Shop</h6>
+                                    <h2>Go Pre-Order Buy & Get Best <em>Prices</em> For You!</h2>
+                                </div>
+                                <p>Lorem ipsum dolor consectetur adipiscing, sed do eiusmod tempor incididunt.</p>
+                                <div class="main-button">
+                                    <a asp-area="User" asp-controller="HomePage" asp-action="Index">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-2 align-self-end">
+                    <div class="subscribe">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section-heading">
+                                    <h6>NEWSLETTER</h6>
+                                    <h2>Get Up To $100 Off Just Buy <em>Subscribe</em> Newsletter!</h2>
+                                </div>
+                                <div class="search-input">
+                                    <form id="subscribe" action="#">
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your email...">
+                                        <button type="submit">Subscribe Now</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="col-lg-12">
+                <p>Copyright © 2048 GameVault Gaming Company. All rights reserved. &nbsp;&nbsp; <a rel="nofollow" href="https://templatemo.com" target="_blank"></a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/usertemplate/vendor/jquery/jquery.min.js"></script>
+    <script src="~/usertemplate/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/usertemplate/assets/js/isotope.min.js"></script>
+    <script src="~/usertemplate/assets/js/owl-carousel.js"></script>
+    <script src="~/usertemplate/assets/js/counter.js"></script>
+    <script src="~/usertemplate/assets/js/custom.js"></script>
+
+</body>
+</html>

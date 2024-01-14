@@ -1,0 +1,97 @@
+﻿@model uowProject.Models.ViewModels.GameVM
+<style>
+    .row{
+        width: 45%;
+        margin-left:5%;
+    }
+
+</style>
+<div class="row">
+    <h2>Game @(Model.Game.GameId <= 0 ? "Add" : "Edit")</h2>
+</div>
+
+
+<form method="post" enctype="multipart/form-data">
+
+    <input asp-for="Game.GameId" type="hidden" />
+    <input asp-for="Game.GameImage" type="hidden" />
+
+
+    @if (@Model != null)
+    {
+
+        <div class="row">
+
+            <img src="@Model.Game.GameImage" style="width:250px;" />
+
+        </div>
+
+
+    }
+
+    <div class="row">
+        <label asp-for="Game.GameName"></label>
+        <input asp-for="Game.GameName" class="form-control" />
+
+    </div>
+    <div class="row">
+        <label asp-for="Game.Category"></label>
+        <input asp-for="Game.Category" class="form-control" />
+
+    </div>
+    <div class="row">
+        <label asp-for="Game.GamePriceBefore"></label>
+        <input asp-for="Game.GamePriceBefore" class="form-control" />
+
+    </div>
+    <div class="row">
+        <label asp-for="Game.GamePriceAfter"></label>
+        <input asp-for="Game.GamePriceAfter" class="form-control" />
+
+    </div>
+
+    <div class="row">
+
+        <label asp-for="Game.ReleaseDate"></label>
+        <input asp-for="Game.ReleaseDate" class="form-control" />
+
+    </div>
+
+    <div class="row">
+
+        <label asp-for="Game.DeveloperId"></label>
+        <select asp-for="Game.DeveloperId" asp-items="@Model.DeveloperList" class="form-control">
+            <option disabled selected>--developer select </option>
+
+
+        </select>
+
+    </div>
+    <div class="row">
+
+        <label asp-for="Game.PublisherId"></label>
+        <select asp-for="Game.PublisherId" asp-items="@Model.PublisherList" class="form-control">
+            <option disabled selected>--publisher select </option>
+
+
+        </select>
+
+    </div>
+
+
+    <div class="row">
+        <label asp-for=Game.GameImage></label>
+        <input type="file" id="file" name="file" accept="image/*" class="form-control" value="" />
+
+    </div>
+
+    <br />
+    <button style="margin-left:5%" type="submit" class="btn btn-primary">@(Model.Game.GameId <= 0 ? "Add" : "Edit")</button>
+
+
+
+
+
+
+
+</form>

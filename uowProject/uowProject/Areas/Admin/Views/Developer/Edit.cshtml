@@ -1,0 +1,38 @@
+﻿@model uowProject.Models.Developer
+<style>
+    .row {
+        width: 45%;
+        margin-left: 5%;
+    }
+
+</style>
+<form method="post">
+    <div class="row">
+        <h2>Update Developer</h2>
+    </div>
+    
+    <div class="row">
+        <input asp-for="DeveloperId" type="hidden" />
+    </div>
+    <div class="row">
+        <label asp-for="DeveloperName"></label>
+        <input asp-for="DeveloperName" class="form-control" />
+    </div>
+    <div class="row">
+        <label asp-for="FoundationDate"></label>
+        <input asp-for="FoundationDate" class="form-control" />
+    </div>
+    <div class="row">
+        <label asp-for="DeveloperValue"></label>
+        <input asp-for="DeveloperValue" class="form-control" />
+    </div>
+    <br />
+
+    <div class="row my-2">
+        <div>
+            <button type="submit" class="btn btn-primary">Edit</button>
+            <a asp-action="Index" class="btn btn-secondary">Back To List</a>
+        </div>
+
+    </div>
+</form>

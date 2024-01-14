@@ -1,0 +1,46 @@
+﻿@model IEnumerable<uowProject.Models.Developer>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h2>Developer List</h2>
+        </div>
+        <div class="col-6">
+            <a asp-controller="Developer" asp-action="Create" class="btn btn-primary">
+                <span>Add New Developer</span>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table table-bordered table-striped my-2">
+            <thead>
+                <tr>
+                    <th>Developer ID</th>
+                    <th>Developer Name</th>
+                    <th>Foundation Date</th>
+                    <th>Developer Value</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.DeveloperId</td>
+                        <td>@item.DeveloperName</td>
+                        <td>@item.FoundationDate</td>
+                        <td>@item.DeveloperValue</td>
+                        <td>
+                            <a asp-controller="Developer" asp-action="Edit" asp-route-id="@item.DeveloperId" class="btn btn-primary">
+                                Edit
+                            </a>
+
+                            <a asp-controller="Developer" asp-action="Delete" asp-route-id="@item.DeveloperId" class="btn btn-danger">
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<uowProject.Models.Publisher>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h2>Publisher List</h2>
+        </div>
+        <div class="col-6">
+            <a asp-controller="Publisher" asp-action="Create" class="btn btn-primary">
+                <span>Add New Publisher</span>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table table-bordered table-striped my-2">
+            <thead>
+                <tr>
+                    <th>Publisher ID</th>
+                    <th>Publisher Name</th>
+                    <th>Foundation Date</th>
+                    <th>Publisher Value</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@item.PublisherId</td>
+                        <td>@item.PublisherName</td>
+                        <td>@item.FoundationDate</td>
+                        <td>@item.PublisherValue</td>
+                        <td>
+                            <a asp-controller="Publisher" asp-action="Edit" asp-route-id="@item.PublisherId" class="btn btn-primary">
+                                Edit
+                            </a>
+
+                            <a asp-controller="Publisher" asp-action="Delete" asp-route-id="@item.PublisherId" class="btn btn-danger">
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

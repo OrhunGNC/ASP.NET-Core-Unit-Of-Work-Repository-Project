@@ -1,0 +1,42 @@
+﻿@model IEnumerable<uowProject.Models.Platform>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h2>Platform List</h2>
+        </div>
+        <div class="col-6">
+            <a asp-controller="Platform" asp-action="Create" class="btn btn-primary">
+                <span>Add New Platform</span>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table table-bordered table-striped my-2">
+            <thead>
+                <tr>
+                    <th>Platform ID</th>
+                    <th>Publisher Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.PlatformId</td>
+                        <td>@item.PlatformName</td>
+                        <td>
+                            <a asp-controller="Platform" asp-action="Edit" asp-route-id="@item.PlatformId" class="btn btn-primary">
+                                Edit
+                            </a>
+
+                            <a asp-controller="Platform" asp-action="Delete" asp-route-id="@item.PlatformId" class="btn btn-danger">
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

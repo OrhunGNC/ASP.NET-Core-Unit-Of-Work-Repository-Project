@@ -1,0 +1,32 @@
+﻿@model uowProject.Models.Publisher
+<style>
+    .row {
+        width: 45%;
+        margin-left: 5%;
+    }
+</style>
+<form method="post">
+    <div class="row">
+        <h2>Create A New Publisher</h2>
+    </div>
+ 
+    <div class="row">
+        <label asp-for="PublisherName"></label>
+        <input asp-for="PublisherName" />
+    </div>
+    <div class="row">
+        <label asp-for="FoundationDate"></label>
+        <input asp-for="FoundationDate" />
+    </div>
+    <div class="row">
+        <label asp-for="PublisherValue"></label>
+        <input asp-for="PublisherValue" />
+    </div>
+    <br />
+    <div class="row ">
+        <div ><button type="submit" class="btn btn-primary">Save</button>
+            <a asp-action="Index" class="btn btn-secondary">Back To List</a>
+        </div>
+
+    </div>
+</form>

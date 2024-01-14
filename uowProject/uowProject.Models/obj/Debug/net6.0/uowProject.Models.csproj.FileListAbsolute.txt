@@ -1,0 +1,12 @@
+C:\Users\pc\Desktop\uowProject\uowProject.Models\bin\Debug\net6.0\uowProject.Models.deps.json
+C:\Users\pc\Desktop\uowProject\uowProject.Models\bin\Debug\net6.0\uowProject.Models.dll
+C:\Users\pc\Desktop\uowProject\uowProject.Models\bin\Debug\net6.0\uowProject.Models.pdb
+C:\Users\pc\Desktop\uowProject\uowProject.Models\obj\Debug\net6.0\uowProject.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc\Desktop\uowProject\uowProject.Models\obj\Debug\net6.0\uowProject.Models.AssemblyInfoInputs.cache
+C:\Users\pc\Desktop\uowProject\uowProject.Models\obj\Debug\net6.0\uowProject.Models.AssemblyInfo.cs
+C:\Users\pc\Desktop\uowProject\uowProject.Models\obj\Debug\net6.0\uowProject.Models.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\uowProject\uowProject.Models\obj\Debug\net6.0\uowProject.Models.dll
+C:\Users\pc\Desktop\uowProject\uowProject.Models\obj\Debug\net6.0\refint\uowProject.Models.dll
+C:\Users\pc\Desktop\uowProject\uowProject.Models\obj\Debug\net6.0\uowProject.Models.pdb
+C:\Users\pc\Desktop\uowProject\uowProject.Models\obj\Debug\net6.0\ref\uowProject.Models.dll
+C:\Users\pc\Desktop\uowProject\uowProject.Models\obj\Debug\net6.0\uowProject.Models.csproj.AssemblyReference.cache

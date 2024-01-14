@@ -1,0 +1,29 @@
+﻿@model uowProject.Models.Platform
+<style>
+    .row {
+        width: 45%;
+        margin-left: 5%;
+    }
+
+</style>
+<form method="post">
+    <div class="row">
+        <h2>Update Publisher</h2>
+    </div>
+    
+    <div class="row">
+        <input asp-for="PlatformId" type="hidden" />
+    </div>
+    <div class="row">
+        <label asp-for="PlatformName"></label>
+        <input asp-for="PlatformName" class="form-control" />
+    </div>
+    <br />
+    <div class="row">
+        <div>
+            <button type="submit" class="btn btn-primary">Edit</button>
+            <a asp-action="Index" class="btn btn-secondary">Back To List</a>
+        </div>
+
+    </div>
+</form>
