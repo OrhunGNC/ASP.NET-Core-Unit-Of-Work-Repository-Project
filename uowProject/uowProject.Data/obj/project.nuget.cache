@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JGzCzuux1gnU+9JcjkCnnXi0bLy3vs6Kx0RrhNY/gfURUu3jiRIT/Kb59xHIlBpJy0/luqQPDdzpZJ2CMwkmcg==",
+  "dgSpecHash": "i8NsudnfSFtFvNcdLfU2ylbxLoxsyacCE+LWUoty6WSO3SRSidM1euN0xvMIgnULVj17DymasIoijUXvsWyXMA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Desktop\\uowProject\\uowProject.Data\\uowProject.Data.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\github\\ASP.NET-Core-Unit-Of-Work-Repository-Project\\uowProject\\uowProject.Data\\uowProject.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",

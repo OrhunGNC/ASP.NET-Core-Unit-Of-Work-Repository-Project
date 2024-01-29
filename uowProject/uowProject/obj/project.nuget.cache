@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4+thvQd+IgcRM0kd296/l9YPAK5FbRSJ5VMf5zBIwEEfyD6dOXOsdFR9N6c6gOWFscCbgwXnevINicL9EIbwSA==",
+  "dgSpecHash": "8lh/p9JKAQjK0JHHmyYt7QRMJ5Yz81BcaydYf//5YKoKLl/PI4gJKlqIRriYbjCDLlWjA1W+PL0EQ1CXerj0tg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\Desktop\\uowProject\\uowProject\\uowProject.csproj",
+  "projectFilePath": "C:\\Users\\pc\\Desktop\\github\\ASP.NET-Core-Unit-Of-Work-Repository-Project\\uowProject\\uowProject\\uowProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
